@@ -2,6 +2,6 @@
 
 @section('content')
     @foreach($contents as $content)
-    <p>{{ $content->title }}</p>
+    <p>{!! $content->uuid !!}</p>
     @endforeach
 @endsection

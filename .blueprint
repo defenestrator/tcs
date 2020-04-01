@@ -1,3 +1,122 @@
+created:
+    - database/migrations/2020_04_01_180234_create_breeders_table.php
+    - database/migrations/2020_04_01_180235_create_carts_table.php
+    - database/migrations/2020_04_01_180236_create_cart_products_table.php
+    - database/migrations/2020_04_01_180237_create_comments_table.php
+    - database/migrations/2020_04_01_180238_create_contents_table.php
+    - database/migrations/2020_04_01_180239_create_coupons_table.php
+    - database/migrations/2020_04_01_180240_create_invoices_table.php
+    - database/migrations/2020_04_01_180241_create_invoice_products_table.php
+    - database/migrations/2020_04_01_180242_create_images_table.php
+    - database/migrations/2020_04_01_180243_create_laboratories_table.php
+    - database/migrations/2020_04_01_180244_create_manufacturers_table.php
+    - database/migrations/2020_04_01_180245_create_lab_results_table.php
+    - database/migrations/2020_04_01_180246_create_orders_table.php
+    - database/migrations/2020_04_01_180247_create_order_products_table.php
+    - database/migrations/2020_04_01_180248_create_order_shipments_table.php
+    - database/migrations/2020_04_01_180249_create_product_categories_table.php
+    - database/migrations/2020_04_01_180250_create_products_table.php
+    - database/migrations/2020_04_01_180251_create_profiles_table.php
+    - database/migrations/2020_04_01_180252_create_profile_settings_table.php
+    - database/migrations/2020_04_01_180253_create_users_table.php
+    - database/migrations/2020_04_01_180254_create_shipping_addresses_table.php
+    - database/migrations/2020_04_01_180255_create_shipping_carriers_table.php
+    - database/migrations/2020_04_01_180256_create_shipments_table.php
+    - database/migrations/2020_04_01_180257_create_strains_table.php
+    - database/migrations/2020_04_01_180258_create_tags_table.php
+    - database/migrations/2020_04_01_180259_create_taggables_table.php
+    - app/Breeder.php
+    - app/Cart.php
+    - app/CartProduct.php
+    - app/Comment.php
+    - app/Content.php
+    - app/Coupon.php
+    - app/Invoice.php
+    - app/InvoiceProduct.php
+    - app/Image.php
+    - app/Laboratory.php
+    - app/Manufacturer.php
+    - app/LabResult.php
+    - app/Order.php
+    - app/OrderProduct.php
+    - app/OrderShipment.php
+    - app/ProductCategory.php
+    - app/Product.php
+    - app/Profile.php
+    - app/ProfileSetting.php
+    - app/User.php
+    - app/ShippingAddress.php
+    - app/ShippingCarrier.php
+    - app/Shipment.php
+    - app/Strain.php
+    - app/Tag.php
+    - app/Taggable.php
+    - database/factories/BreederFactory.php
+    - database/factories/CartFactory.php
+    - database/factories/CartProductFactory.php
+    - database/factories/CommentFactory.php
+    - database/factories/ContentFactory.php
+    - database/factories/CouponFactory.php
+    - database/factories/InvoiceFactory.php
+    - database/factories/InvoiceProductFactory.php
+    - database/factories/ImageFactory.php
+    - database/factories/LaboratoryFactory.php
+    - database/factories/ManufacturerFactory.php
+    - database/factories/LabResultFactory.php
+    - database/factories/OrderFactory.php
+    - database/factories/OrderProductFactory.php
+    - database/factories/OrderShipmentFactory.php
+    - database/factories/ProductCategoryFactory.php
+    - database/factories/ProductFactory.php
+    - database/factories/ProfileFactory.php
+    - database/factories/ProfileSettingFactory.php
+    - database/factories/UserFactory.php
+    - database/factories/ShippingAddressFactory.php
+    - database/factories/ShippingCarrierFactory.php
+    - database/factories/ShipmentFactory.php
+    - database/factories/StrainFactory.php
+    - database/factories/TagFactory.php
+    - database/factories/TaggableFactory.php
+    - app/Http/Controllers/BreederController.php
+    - app/Http/Controllers/CartController.php
+    - app/Http/Controllers/CommentController.php
+    - app/Http/Controllers/ContentController.php
+    - app/Http/Controllers/CouponController.php
+    - app/Http/Controllers/ImageController.php
+    - app/Http/Controllers/InvoiceController.php
+    - app/Http/Controllers/LaboratoryController.php
+    - app/Http/Controllers/LabResultController.php
+    - app/Http/Controllers/ManufacturerController.php
+    - app/Http/Controllers/OrderController.php
+    - app/Http/Controllers/ProductController.php
+    - app/Http/Controllers/ProductCategoryController.php
+    - app/Http/Controllers/ShipmentController.php
+    - app/Http/Controllers/ShippingAddressController.php
+    - app/Http/Controllers/ShippingCarrierController.php
+    - app/Http/Controllers/StrainController.php
+    - app/Http/Controllers/TagController.php
+    - app/Http/Controllers/UserController.php
+    - tests/Feature/Http/Controllers/BreederControllerTest.php
+    - tests/Feature/Http/Controllers/CartControllerTest.php
+    - tests/Feature/Http/Controllers/CommentControllerTest.php
+    - tests/Feature/Http/Controllers/ContentControllerTest.php
+    - tests/Feature/Http/Controllers/CouponControllerTest.php
+    - tests/Feature/Http/Controllers/ImageControllerTest.php
+    - tests/Feature/Http/Controllers/InvoiceControllerTest.php
+    - tests/Feature/Http/Controllers/LaboratoryControllerTest.php
+    - tests/Feature/Http/Controllers/LabResultControllerTest.php
+    - tests/Feature/Http/Controllers/ManufacturerControllerTest.php
+    - tests/Feature/Http/Controllers/OrderControllerTest.php
+    - tests/Feature/Http/Controllers/ProductControllerTest.php
+    - tests/Feature/Http/Controllers/ProductCategoryControllerTest.php
+    - tests/Feature/Http/Controllers/ShipmentControllerTest.php
+    - tests/Feature/Http/Controllers/ShippingAddressControllerTest.php
+    - tests/Feature/Http/Controllers/ShippingCarrierControllerTest.php
+    - tests/Feature/Http/Controllers/StrainControllerTest.php
+    - tests/Feature/Http/Controllers/TagControllerTest.php
+    - tests/Feature/Http/Controllers/UserControllerTest.php
+updated:
+    - routes/web.php
 models:
     Content: { uuid: 'efficientUuid index', user_id: 'id nullable', title: 'string:140', body: longtext, slug: 'string:180 unique', published_at: 'nullable timestamp', contentable_type: 'string:100 nullable', contentable_id: 'unsignedBigInteger nullable', custom_fields: 'json nullable' }
     Commentable: { commentable_id: unsignedBigInteger, commentable_type: string, user_id: id, comment: longtext }
@@ -6,7 +125,7 @@ models:
     Laboratory: { uuid: 'efficientUuid index', name: 'string:200', address_1: 'string nullable', address_2: 'string nullable', city: 'string nullable', country: 'string nullable', postcode: 'string nullable', website: 'string nullable', email: 'email nullable' }
     LabResult: { uuid: 'efficientUuid index', laboratory_id: 'id index', lab_result_type: 'string:100', lab_result_id: unsignedBigInteger, result: json }
     Strain: { uuid: 'efficientUuid index', name: 'string:140', lineage: 'string:400', landrace: 'boolean false', description: longtext }
-    Breeder: { name: 'string:200', uuid: 'efficientUuid index', address_1: 'string nullable', address_2: 'string nullable', city: 'string nullable', country: 'string nullable', postcode: 'string nullable', website: 'string nullable', email: 'email nullable' }
+    Breeder: { name: 'string:200', uuid: 'efficientUuid index', description: longtext, address_1: 'string nullable', address_2: 'string nullable', city: 'string nullable', country: 'string nullable', postcode: 'string nullable', website: 'string nullable', email: 'email nullable' }
     Comments: { uuid: 'efficientUuid index', commentable_type: 'string:100', commentable_id: unsignedBigInteger, user_id: id, comment: longtext }
     Coupon: { name: 'string:140', percentage: boolean, value: id, active: boolean }
     Manufacturer: { uuid: 'efficientUuid index', name: 'string:200', address_1: 'string nullable', address_2: 'string nullable', city: 'string nullable', country: 'string nullable', postcode: 'string nullable', website: 'string nullable', email: 'email nullable' }
@@ -23,3 +142,8 @@ models:
     TagCategory: { uuid: 'efficientUuid index', name: 'string:70' }
     Taggable: { uuid: 'efficientUuid index', tag_id: id, taggable_type: 'string:80 index', taggable_id: unsignedBigInteger }
     Comment: { uuid: 'efficientUuid index', commentable_type: 'string:100', commentable_id: unsignedBigInteger, user_id: id, comment: longtext }
+    OrderShipment: { order_id: unsignedBigInteger, shipment_id: unsignedBigInteger }
+    ShippingCarrier: { uuid: 'efficientUuid index', name: 'string:80', tracking_url: string }
+    Shipment: { uuid: 'efficientUuid index', shipping_carrier_id: id, date_shipped: timestamp }
+    Profile: { facebook: 'string:140', rollitup: 'string:140', fourtwentymag: 'string:140', instagram: 'string:140', twitter: 'string:140', snapchat: 'string:140', thcfarmer: 'string:140', strainly: 'string:140', clonify: 'string:140' }
+    ProfileSetting: { facebook: 'boolean false', rollitup: 'boolean false', fourtwentymag: 'boolean false', instagram: 'boolean false', twitter: 'boolean false', snapchat: 'boolean false', thcfarmer: 'boolean false', strainly: 'boolean false', clonify: 'boolean false' }

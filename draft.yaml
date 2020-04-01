@@ -35,7 +35,7 @@ models:
   Coupon:
     name: string:140
     percentage: boolean
-    value: id
+    value: unsignedInteger
     active: boolean
   Invoice:
     uuid: efficientUuid index
@@ -103,6 +103,26 @@ models:
     category_id: id
     name: string
     price: unsignedBigInteger
+  Profile:
+    facebook: string:140
+    rollitup: string:140
+    fourtwentymag: string:140
+    instagram: string:140
+    twitter: string:140
+    snapchat: string:140
+    thcfarmer: string:140
+    strainly: string:140
+    clonify: string:140
+  ProfileSetting:
+    facebook: boolean false
+    rollitup: boolean false
+    fourtwentymag: boolean false
+    instagram: boolean false
+    twitter: boolean false
+    snapchat: boolean false
+    thcfarmer: boolean false
+    strainly: boolean false
+    clonify: boolean false
   User:
     uuid: efficientUuid index
     name: string:80
@@ -148,9 +168,9 @@ controllers:
     resource
   Cart:
     resource
-  Content:
-    resource
   Comment:
+    resource
+  Content:
     resource
   Coupon:
     resource
@@ -160,15 +180,15 @@ controllers:
     resource
   Laboratory:
     resource
-  Manufacturer:
-    resource
   LabResult:
+    resource
+  Manufacturer:
     resource
   Order:
     resource
-  ProductCategory:
-    resource
   Product:
+    resource
+  ProductCategory:
     resource
   Shipment:
     resource
