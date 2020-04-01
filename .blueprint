@@ -1,0 +1,25 @@
+models:
+    Content: { uuid: 'efficientUuid index', user_id: 'id nullable', title: 'string:140', body: longtext, slug: 'string:180 unique', published_at: 'nullable timestamp', contentable_type: 'string:100 nullable', contentable_id: 'unsignedBigInteger nullable', custom_fields: 'json nullable' }
+    Commentable: { commentable_id: unsignedBigInteger, commentable_type: string, user_id: id, comment: longtext }
+    ShippingAddress: { uuid: 'efficientUuid index', user_id: id, ship_to_name: string, address_1: string, address_2: 'string nullable', city: string, country: string, postcode: string }
+    Image: { uuid: 'efficientUuid index', user_id: 'id nullable index', caption: 'string nullable', credits: 'string nullable', path: string, published_at: 'timestamp nullable', imageable_type: 'string:100', imageable_id: unsignedBigInteger }
+    Laboratory: { uuid: 'efficientUuid index', name: 'string:200', address_1: 'string nullable', address_2: 'string nullable', city: 'string nullable', country: 'string nullable', postcode: 'string nullable', website: 'string nullable', email: 'email nullable' }
+    LabResult: { uuid: 'efficientUuid index', laboratory_id: 'id index', lab_result_type: 'string:100', lab_result_id: unsignedBigInteger, result: json }
+    Strain: { uuid: 'efficientUuid index', name: 'string:140', lineage: 'string:400', landrace: 'boolean false', description: longtext }
+    Breeder: { name: 'string:200', uuid: 'efficientUuid index', address_1: 'string nullable', address_2: 'string nullable', city: 'string nullable', country: 'string nullable', postcode: 'string nullable', website: 'string nullable', email: 'email nullable' }
+    Comments: { uuid: 'efficientUuid index', commentable_type: 'string:100', commentable_id: unsignedBigInteger, user_id: id, comment: longtext }
+    Coupon: { name: 'string:140', percentage: boolean, value: id, active: boolean }
+    Manufacturer: { uuid: 'efficientUuid index', name: 'string:200', address_1: 'string nullable', address_2: 'string nullable', city: 'string nullable', country: 'string nullable', postcode: 'string nullable', website: 'string nullable', email: 'email nullable' }
+    Order: { uuid: 'efficientUuid index', user_id: id, subtotal: id, coupon_id: id, shipping_price: unsignedBigInteger }
+    Invoice: { uuid: 'efficientUuid index', user_id: 'id index', shipping_address_id: id, tax: unsignedInteger, shipping_price: unsignedBigInteger }
+    ProductCategory: { uuid: 'efficientUuid index', name: 'string unique', attributes: json }
+    Product: { uuid: 'efficientUuid index', strain_id: id, category_id: id, name: string, price: unsignedBigInteger }
+    OrderProduct: { order_id: unsignedBigInteger, product_id: unsignedBigInteger }
+    InvoiceProduct: { invoice_id: unsignedBigInteger, product_id: unsignedBigInteger }
+    Cart: { user_id: id, uuid: 'efficientUuid index' }
+    CartProduct: { cart_id: unsignedBigInteger, product_id: unsignedBigInteger }
+    User: { uuid: 'efficientUuid index', name: 'string:80', profile_id: id, email: 'email unique', email_verified_at: timestamp, password: string, remember_token: 'string:100' }
+    Tag: { uuid: 'efficientUuid index', tag_category: 'string:80', name: 'string:70' }
+    TagCategory: { uuid: 'efficientUuid index', name: 'string:70' }
+    Taggable: { uuid: 'efficientUuid index', tag_id: id, taggable_type: 'string:80 index', taggable_id: unsignedBigInteger }
+    Comment: { uuid: 'efficientUuid index', commentable_type: 'string:100', commentable_id: unsignedBigInteger, user_id: id, comment: longtext }
